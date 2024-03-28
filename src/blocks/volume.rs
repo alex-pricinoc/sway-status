@@ -60,6 +60,7 @@ impl FromStr for Volume {
         })()
         .ok_or(ParseVolumeError)?;
 
+        // example device: alsa_output.pci-0000_00_1f.3.analog-stereo
         let device = device
             .split_once('.')
             .and_then(|e| e.1.chars().next())

@@ -57,7 +57,7 @@ impl Memory {
 
             let val = words
                 .next()
-                .and_then(|x| x.parse::<u64>().ok())
+                .and_then(|x| x.parse().ok())
                 .expect("failed to parse /proc/meminfo");
 
             match name {
